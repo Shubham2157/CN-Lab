@@ -1,10 +1,9 @@
 #include <stdio.h>
 struct student {
     char Name[50];
-    int roll;
-    long phone;
+    unsigned int roll;
+    unsigned long long int phone;
     char address[100];
-
 } std;
 
 int main() {
@@ -13,10 +12,10 @@ int main() {
 
         printf("\nEnter roll no: ");
         scanf("%d",&std.roll);
-        printf("Enter  name: ");
+        printf("Enter name: ");
         scanf("%s", &std.Name);
         printf("Enter phone number: ");
-        scanf("%l", &std.phone);
+        scanf("%lld", &std.phone);
         printf("Enter  address: ");
         scanf("%s", &std.address);
 
@@ -26,7 +25,8 @@ int main() {
         printf("\nRoll number: %d\n", std.roll);
         printf("Name: ");
         puts(std.Name);
-        printf("Phone number: %1f\n", std.phone);
+        printf("Phone number: %lld \n",std.phone);
+        //puts(std.phone);
         printf("Address: ");
         puts(std.address);
 
